@@ -12,9 +12,9 @@ export const AboutMe = () => {
             <div className="space-y-6">
                 <h3 className="text-2xl font-semibold">CS student + AI Researcher</h3>
                 <p className="text-muted-foreground">
-                I enjoy transforming abstract mathematical concepts into practical solutions. From attending in mathematics camps like Ross and HSMC to publishing research on formal verification of AI systems using computational tree logic, I've always pursued the intersection of theory and application. This approach led me to win 1st place at Columbia's Devfest Hackathon with Patent.io—a tool that combines GPT-4, RAG architecture, and vector databases to automate patent application generation.
+                I enjoy transforming abstract mathematical concepts into practical solutions. From attending mathematics camps like Ross and HSMC to publishing research on formal verification of AI systems using computational tree logic, I've always pursued the intersection of theory and application. This approach led me to win 1st place at Columbia's Devfest Hackathon with Patent.io—a tool that combines GPT-4, RAG architecture, and vector databases to automate patent application generation.
                 </p>
-                <p className="text-muted-foreground">Beyond academics, I enjoy watching and playing basketball (go Knicks!), trying new restraurants (love cheap eats), and running around NYC (completed NYC half this March, thinking about NYC full marathon). I also have a passion for pure mathematics especially in fields like number theory, game theory, and combinatorics.
+                <p className="text-muted-foreground">Beyond academics, I enjoy watching and playing basketball (go Knicks!), trying new restaurants (love cheap eats), and running around NYC (completed NYC half this March, thinking about NYC full marathon). I also have a passion for pure mathematics, especially in fields like number theory, game theory, and combinatorics.
                 </p>
                 <p className="text-muted-foreground">
                     I have experience in a variety of programming languages, including Java, Python, C, JavaScript, and more.
