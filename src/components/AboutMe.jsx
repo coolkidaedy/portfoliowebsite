@@ -10,11 +10,12 @@ export const AboutMe = () => {
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center"> 
             <div className="space-y-6">
-                <h3 className="text-2xl font-semibold">CS student + AI Researcher</h3>
+                <h3 className="text-2xl font-semibold">Computer Science and Philosophy Student</h3>
                 <p className="text-muted-foreground">
-                I enjoy transforming abstract mathematical concepts into practical solutions. From attending mathematics camps like Ross and HSMC to publishing research on formal verification of AI systems using computational tree logic, I've always pursued the intersection of theory and application. This approach led me to win 1st place at Columbia's Devfest Hackathon with Patent.io—a tool that combines GPT-4, RAG architecture, and vector databases to automate patent application generation.
+                I'm Aedin, a CS & Philosophy student at Columbia Engineering. My background is a mix of theoretical mathematics and hands-on software development across full-stack, ML, and AI systems.
+I'm looking to join an early-stage startup where I can take ownership and build things that matter. I like hard problems and fast-moving environments.
                 </p>
-                <p className="text-muted-foreground">Beyond academics, I enjoy watching and playing basketball (go Knicks!), trying new restaurants (love cheap eats), and running around NYC (completed NYC half this March, thinking about NYC full marathon). I also have a passion for pure mathematics, especially in fields like number theory, game theory, and combinatorics.
+                <p className="text-muted-foreground">Beyond academics, I enjoy watching and playing basketball (go Nets!!), trying new restaurants (love cheap eats), and running around NYC (completed NYC half this March, thinking about NYC full marathon). I also have a passion for pure mathematics, especially in fields like number theory, game theory, and combinatorics.
                 </p>
                 <p className="text-muted-foreground">
                     I have experience in a variety of programming languages, including Java, Python, C, JavaScript, and more.
@@ -37,7 +38,7 @@ export const AboutMe = () => {
                             <Briefcase className="h-6 w-6 text-primary"/>
                         </div>
                         <div className="text-left">
-                            <h4 className="font-semibold text-lg">Incoming SWE Intern at Sumly</h4>
+                            <h4 className="font-semibold text-lg">Software Engineering Intern at Sumly</h4>
                             <p className="text-muted-foreground">
                             Summer intern at Sumly, a fintech startup creating an AI-powered expense tracking mobile platform for the self-employed.
                             </p>
@@ -52,9 +53,9 @@ export const AboutMe = () => {
                             <Briefcase className="h-6 w-6 text-primary"/>
                         </div>
                         <div className="text-left">
-                            <h4 className="font-semibold text-lg">Front-End SWE Intern at Gamsa Foods </h4>
+                            <h4 className="font-semibold text-lg">Software Engineer Intern at Gamsa Foods </h4>
                             <p className="text-muted-foreground">
-                            Engineered interactive web application with HTML, CSS, and JavaScript.
+                            Engineered interactive web application with HTML, CSS, and JavaScript for CPG backed startup.
                             </p>
 
                         </div>
@@ -67,9 +68,9 @@ export const AboutMe = () => {
                             <Microscope className="h-6 w-6 text-primary"/>
                         </div>
                         <div className="text-left">
-                            <h4 className="font-semibold text-lg">AI Researcher</h4>
+                            <h4 className="font-semibold text-lg">Counselor/Scholar at The Ross Mathematics Program</h4>
                             <p className="text-muted-foreground">
-                                First-authored published research on applying mathematical logic formulas to distributed AI bioinformatics systems.
+                                Proved many number theory, combinatorics, and analysis theorems. Helped 4 students conquer an introductory course in Number Theory. 
                             </p>
 
                         </div>
