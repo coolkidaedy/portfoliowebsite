@@ -1,11 +1,13 @@
 import { cn } from "@/lib/utils";
 import { useEffect, useState } from "react";
 import { Menu, X } from "lucide-react";
+import { Link } from "react-router-dom";
 const navItems = [
-    {name: 'Home', href: "#hero"},
-    {name: 'About', href: "#about"},
-    {name: 'Projects', href: "#projects"},
-    {name: 'Contact', href: "#contact"},
+    {name: 'Home', href: "/#hero"},
+    {name: 'About', href: "/#about"},
+    {name: 'Projects', href: "/#projects"},
+    {name: 'Contact', href: "/#contact"},
+    {name: 'Bucket List', to: "/bucket-list"},
 ];
 
 export const Navbar = () => {
@@ -31,9 +33,15 @@ export const Navbar = () => {
             {/* desktop menu button */}
             <div className="hidden md:flex space-x-8">
                 {navItems.map((item, key) => (
-                  <a key={key} href={item.href} className="text-foreground/80 hover:text-primary transition-colors duration-300">
-                    {item.name}
-                  </a>  
+                  item.to ? (
+                    <Link key={key} to={item.to} className="text-foreground/80 hover:text-primary transition-colors duration-300">
+                      {item.name}
+                    </Link>
+                  ) : (
+                    <a key={key} href={item.href} className="text-foreground/80 hover:text-primary transition-colors duration-300">
+                      {item.name}
+                    </a>
+                  )
                 ))}
             </div>
 
@@ -47,9 +55,15 @@ export const Navbar = () => {
             )}>
             <div className="flex flex-col space-y-8 text-xl">
                 {navItems.map((item, key) => (
-                  <a key={key} href={item.href} className="text-foreground/80 hover:text-primary transition-colors duration-300" onClick={() => setIsMenuOpen(false)}>
-                    {item.name}
-                  </a>  
+                  item.to ? (
+                    <Link key={key} to={item.to} className="text-foreground/80 hover:text-primary transition-colors duration-300" onClick={() => setIsMenuOpen(false)}>
+                      {item.name}
+                    </Link>
+                  ) : (
+                    <a key={key} href={item.href} className="text-foreground/80 hover:text-primary transition-colors duration-300" onClick={() => setIsMenuOpen(false)}>
+                      {item.name}
+                    </a>
+                  )
                 ))}
             </div>
             </div>

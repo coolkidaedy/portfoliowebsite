@@ -15,7 +15,7 @@ export const AboutMe = () => {
                 I'm Aedin, a CS & Philosophy student at Columbia Engineering. My background is a mix of theoretical mathematics and hands-on software development across full-stack, ML, and AI systems.
 I'm looking to join an early-stage startup where I can take ownership and build things that matter. I like hard problems and fast-moving environments.
                 </p>
-                <p className="text-muted-foreground">Beyond academics, I enjoy watching and playing basketball (go Nets!!), trying new restaurants (love cheap eats), and running around NYC (completed NYC half this March, thinking about NYC full marathon). I also have a passion for pure mathematics, especially in fields like number theory, game theory, and combinatorics.
+                <p className="text-muted-foreground">Beyond academics, I enjoy watching and playing basketball (go Nets!!), trying new restaurants (love cheap eats), and running around NYC. I also have a passion for pure mathematics, especially in fields like number theory, game theory, and combinatorics.
                 </p>
                 <p className="text-muted-foreground">
                     I have experience in a variety of programming languages, including Java, Python, C, JavaScript, and more.
@@ -32,6 +32,21 @@ I'm looking to join an early-stage startup where I can take ownership and build 
                 </div>
             </div>
             <div className="grid grid-cols-1 gap-6">
+                <div className="gradient-border p-6 card-hover">
+                <div className="flex items-start gap-4">
+                        <div className="p-3 rounded-full bg-primary/10">
+                            <Briefcase className="h-6 w-6 text-primary"/>
+                        </div>
+                        <div className="text-left">
+                            <h4 className="font-semibold text-lg">Software Engineer Intern at Pinterest </h4>
+                            <p className="text-muted-foreground">
+                            Working on the Platforms Team, building out testing infrastructure and tools
+                            </p>
+
+                        </div>
+
+                    </div>
+                    </div>
                 <div className="gradient-border p-6 card-hover">
                     <div className="flex items-start gap-4">
                         <div className="p-3 rounded-full bg-primary/10">
@@ -62,22 +77,7 @@ I'm looking to join an early-stage startup where I can take ownership and build 
 
                     </div>
                 </div>
-                <div className="gradient-border p-6 card-hover">
-                <div className="flex items-start gap-4">
-                        <div className="p-3 rounded-full bg-primary/10">
-                            <Microscope className="h-6 w-6 text-primary"/>
-                        </div>
-                        <div className="text-left">
-                            <h4 className="font-semibold text-lg">Counselor/Scholar at The Ross Mathematics Program</h4>
-                            <p className="text-muted-foreground">
-                                Proved many number theory, combinatorics, and analysis theorems. Helped 4 students conquer an introductory course in Number Theory. 
-                            </p>
-
-                        </div>
-
-                    </div>
-                </div>
-
+                
             </div>
             </div>
         </div>
