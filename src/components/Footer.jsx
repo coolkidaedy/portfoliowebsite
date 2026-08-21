@@ -1,15 +1,12 @@
-import { ArrowUp } from "lucide-react";
+import { serif } from "@/lib/academicStyle";
+
 export const Footer = () => {
-    return (
-        <footer className="py-12 px-4 bg-card relative border-t border-border mt-12 pt-8 flex flex-wrap justify-between items-center">
-        {" "}
-        <p className="text-sm text-muted-foreground">
-        {" "}
-        &copy; {new Date().getFullYear()} aedinpereira.dev. All rights reserved. {" "}
-        </p>
-        <a href="#hero" className="p-2 rounded--full bg-primary/10 hover:bg-primary-20 text-primary transition-colors">
-            <ArrowUp size={20} />
-        </a>
-        </footer>
-    );
-}
+  return (
+    <footer
+      className="px-5 py-6"
+      style={{ fontFamily: serif, color: "#000", fontSize: "16px", textAlign: "left" }}
+    >
+      &copy; 2026 Aedin Pereira
+    </footer>
+  );
+};

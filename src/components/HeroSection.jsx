@@ -1,33 +1,86 @@
-import { ArrowDown } from "lucide-react"
+import { linkStyle, serif } from "@/lib/academicStyle";
 
 export const HeroSection = () => {
-    return <section 
-        id="hero" 
-        className="relative min-h-screen flex flex-col items-center justify-center px-4"
-        style={{ userSelect: 'none' }}
+  return (
+    <header
+      id="hero"
+      className="px-5 pt-6 pb-4"
+      style={{ fontFamily: serif, color: "#000", fontSize: "16px", textAlign: "left" }}
     >
-        <div className="container max-w-4xl mx-auto text-center z-10">
-            <div className="space-y-6">
-                <h1 className="text-4xl md:text-6xl font-bold trackting-tight">
-                    <span className="opacity-0 animate-fade-in">Hi, I'm</span>
-                    <span className="text-primary opacity-0 animate-fade-in-delay-1"> Aedin</span>
-                    <span className="text-gradient ml-2 opacity-0 animate-fade-in-delay-2"> Pereira</span>
-                </h1>
-                <p className="text-lg md:text-xl text-muted-foreground max-2-2xl mx-auto opacity-0 animate-fade-in-delay-4">
-                I'm a Computer Science and Philosophy student at Columbia University. 
-                I'm passionate about AI/ML, full-stack development, and pure mathematics.
-                </p>
-                <div className="pt-4 opacity-0 animate-fade-in-delay-4">
-                    <a href="#projects" className="cosmic-button">
-                        View My Work
-                    </a>
-                </div>
-            </div>
+      <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-4">
+        <div>
+          <h1 className="font-bold mb-3" style={{ fontSize: "32px" }}>
+            Aedin Pereira
+          </h1>
+          <p className="leading-normal">
+            Student, Computer Science
+            <br />
+            Columbia University
+          </p>
         </div>
 
-        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex flex-col items-center animate-bounce">
-            <span className="text-sm text-muted-foreground mb-2"> Scroll </span>
-            <ArrowDown className="h-5 w-5 text-primary"/>
+        <div className="flex flex-col-reverse md:flex-row gap-3 items-start md:items-start">
+          <div id="contact" className="leading-normal text-left md:text-right">
+            <p>Contact information:</p>
+            <p>
+              GitHub:{" "}
+              <a href="https://github.com/coolkidaedy" target="_blank" rel="noreferrer" style={linkStyle}>
+                @coolkidaedy
+              </a>
+            </p>
+            <p>
+              LinkedIn:{" "}
+              <a
+                href="https://www.linkedin.com/in/aedin-pereira/"
+                target="_blank"
+                rel="noreferrer"
+                style={linkStyle}
+              >
+                aedin-pereira
+              </a>
+            </p>
+            <p>Email: ap4672 at columbia dot edu</p>
+            <p className="mt-2">New York, NY</p>
+          </div>
+
+          <img
+            src="/assets/BE68F8ED-DDDD-4751-8EE8-AC04FDA8FBF1_1_105_c.jpeg"
+            alt="Aedin Pereira"
+            width={196}
+            height={186}
+            className="object-cover shrink-0"
+            style={{ width: "196px", height: "186px", border: "0" }}
+          />
         </div>
-    </section>
-}
+      </div>
+
+      <nav className="mt-2">
+        [{" "}
+        <a href="#about" style={linkStyle}>
+          about
+        </a>{" "}
+        &ndash;{" "}
+        <a href="#experience" style={linkStyle}>
+          experience
+        </a>{" "}
+        &ndash;{" "}
+        <a href="#projects" style={linkStyle}>
+          projects
+        </a>{" "}
+        &ndash;{" "}
+        <a href="#bucketlist" style={linkStyle}>
+          bucket list
+        </a>{" "}
+        &ndash;{" "}
+        <a href="#pictures" style={linkStyle}>
+          pictures
+        </a>{" "}
+        &ndash;{" "}
+        <a href="#contact" style={linkStyle}>
+          contact
+        </a>{" "}
+        ]
+      </nav>
+    </header>
+  );
+};

@@ -7,6 +7,7 @@
   --color-primary: hsl(var(--primary));
   --color-primary-foreground: hsl(var(--primary-foreground));
   --color-card: hsl(var(--card));
+  --color-muted-text: hsl(var(--muted-text));
 
   --animate-float: float 6s ease-in-out infinite;
   --animate-pulse-subtle: pulse-subtle 4s ease-in-out infinite;
@@ -39,7 +40,7 @@
 @keyframes fade-in {
   from {
     opacity: 0;
-    transfrorm: translateY(20px);
+    transform: translateY(20px);
   }
   to {
     opacity: 1;
@@ -63,15 +64,13 @@
 
 @layer base {
   :root {
-    --background: 210 40% 98%;
-    --foreground: 222 47% 11%;
+    --background: 0 0% 90%;
+    --foreground: 248 100% 7%;
     --card: 0 0% 100%;
-    --primary: 250 47% 60%;
-    --primary-foreground: 210 40% 98%;
-    --border: 214 32% 91%;
-
-
-
+    --primary: 248 100% 7%;
+    --primary-foreground: 0 0% 90%;
+    --border: 0 0% 80%;
+    --muted-text: 247 5% 47%;
   }
   .dark {
     --background: 222 47% 4%;
@@ -80,6 +79,7 @@
     --primary: 250 65% 60%;
     --primary-foreground: 213 31% 91%;
     --border: 217 33% 20%;
+    --muted-text: 213 31% 60%;
   }
   * {
     @apply border-border;
@@ -142,4 +142,38 @@
   margin: 0 auto;
   padding: 0;
   text-align: center;
+}
+
+/* ============================================================
+   Welcome landing page — design tokens + fonts, ported 1:1 from
+   the example site's tokens.css / fonts.css (Astro "Megan's World"
+   welcome scene). Names kept identical to the source for fidelity.
+   ============================================================ */
+@font-face {
+  font-family: "Gelica";
+  src: url("/fonts/gelica/Gelica-Light.woff2") format("woff2");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Gelica";
+  src: url("/fonts/gelica/Gelica-LightItalic.woff2") format("woff2");
+  font-weight: 300;
+  font-style: italic;
+  font-display: swap;
+}
+
+:root {
+  --color-bg: #f3f1eb;
+  --color-ink: #242424;
+  --color-ink-dim: #666666;
+  --color-ink-mute: #a2a2a2;
+  --color-ink-inverted: #ffffff;
+  --color-pink: #bf5a7a;
+  --color-teal: #168b9d;
+  --color-orange: #cb7836;
+  --font-display: "Gelica", "Cormorant Garamond", "Times New Roman", serif;
+  --font-mono: "Source Code Pro", ui-monospace, "SF Mono", Menlo, monospace;
+  --ease-out-soft: cubic-bezier(0.22, 1, 0.36, 1);
 }

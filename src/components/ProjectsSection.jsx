@@ -1,106 +1,113 @@
-import { ArrowRight, ExternalLink, Github } from "lucide-react";
+import { linkStyle, serif } from "@/lib/academicStyle";
 
 const projects = [
-{
+  {
     id: 1,
-    title: "Patent.io",
-    description: "This AI platform automates patent filing by generating required forms from user inputs and uses a vector database of U.S. patents to identify similar existing patents, helping users avoid unnecessary application fees.",
-    image: "/projects/patentprojject.png",
-    tags: ["Python", "JavaScript", "FAISS Vector Database", "RAG"],
-    githubUrl: "https://github.com/coolkidaedy/Patent-Automation-Agent",
-},
-{
+    title: "One Billion Row Challenge",
+    description:
+      "Optimized a 1-billion-row aggregation from a single-threaded baseline into a lock-free work-stealing map-reduce, cutting runtime from 80s to 6s.",
+    links: [{ label: "github", url: "https://github.com/coolkidaedy/1brc-cpp" }],
+  },
+  {
     id: 2,
-    title: "March Madness Predictor",
-    description: "a machine learning algorithm that predicts NCAA Tournament outcomes by leveraging RandomForest algorithms",
-    image: "/projects/mlmarch.png",
-    tags: ["Python", "Random Forest", "Pandas", "Numpy", "Scikit-learn"],
-    githubUrl: "",
-},
-{
+    title: "Columbia Carpools",
+    description:
+      "Launched a ride-sharing platform for Columbia students with 260+ users and 50+ coordinated airport rides.",
+    links: [{ label: "github", url: "https://github.com/coolkidaedy/columbiacarpools" }],
+  },
+  {
     id: 3,
-    title: "Distributed AI Research",
-    description: "This research project performs a verification of distributed AI system architectures in bioinformatics applications. First-authored paper and presented at research symposium.",
-    image: "/projects/research.png",
-    tags: ["Java", "C++", "LaTex", "Computational Tree Logic",],
-    githubUrl: "https://arxiv.org/abs/2302.04389",
-},
-{
+    title: "Low-Level Systems & Performance Projects",
+    description:
+      "Built a set of low-level systems tools in C/C++, including a custom memory allocator, a LRU/LFU cache, and a parallelized file-search utility.",
+    links: [{ label: "code", url: "https://gist.github.com/coolkidaedy/5852e23a4bf5e9c10d8390747ec823a2.js" }],
+  },
+  {
     id: 4,
-    title: "Portfolio Website",
-    description: "This portfolio website showcases my projects and skills, built with React and Tailwind CSS.",
-    image: "/projects/website.png",
-    tags: ["React", "JavaScript", "Tailwind CSS"],
-    githubUrl: "https://github.com/coolkidaedy/portfoliowebsite",
-},
-{
+    title: "Patent.io",
+    description:
+      "Built a app that uses GPT, RAG, and a vector database of 100,000 U.S. patents to help small businesses draft patents. Won 1st place at Columbia's DevFest Hackathon.",
+    links: [{ label: "github", url: "https://github.com/coolkidaedy/Patent-Automation-Agent" }],
+  },
+  {
     id: 5,
-    title: "Minishell",
-    description: "A simple shell implementation in C, designed to handle basic shell functionalities like command execution, piping, and redirection.",
-    image: "projects/minishell.png",
-    tags: ["C", "Git", "Unix", "Makefile"],
-    githubUrl: "https://gist.github.com/coolkidaedy/901eae34f0f6f5266c991bbc12d94b54",
-},
-{
+    title: "ML March Madness Predictor",
+    description:
+      "Built an end-to-end Random Forest pipeline over 15 years of NCAA tournament data and 15+ statistical factors, reaching 82.5% prediction accuracy.",
+    links: [{ label: "github", url: "https://github.com/coolkidaedy/MLMarchMadness" }],
+  },
+  {
     id: 6,
-    title: "Gamsa Foods' Website",
-    description: "A website for a Korean Oatmeal startup, Gamsa Foods, showcasing their products with animations and interactive UI.",
-    image: "projects/gamsa.png",
-    tags: ["HTML", "CSS", "JavaScript"],
-    githubUrl: "https://gamsafoods.com/",
-},
+    title: "LED Chessboard",
+    description:
+      "Built an LED chessboard on an Arduino Uno that shows legal chess moves in real time, demoed live to 300+ scholars and faculty.",
+    links: [
+      { label: "github", url: "https://github.com/coolkidaedy/AOE-Chessboard-Forked" },
+      { label: "video", url: "https://youtu.be/IvCtMuGfCxs?si=GrijzNK1JgQM3oS5" },
+    ],
+  },
+  {
+    id: 7,
+    title: "Distributed AI Research",
+    description:
+      "First-authored a paper on distributed AI verification in bioinformatics using Computation Tree Logic, presented to 100+ researchers.",
+    links: [{ label: "paper", url: "https://arxiv.org/abs/2302.04389" }],
+  },
+  {
+    id: 8,
+    title: "Computational Sound",
+    description:
+      "Hosted an algorave for a class final, teaching Columbia students to live-code music in Strudel.",
+    links: [{ label: "video", url: "https://youtu.be/K4-Eb8QL1Dw?si=nSW94DRWy2LDf2h2" }],
+  },
+  {
+    id: 9,
+    title: "Minishell",
+    description:
+      "A Unix shell implementation in C supporting command execution, piping, redirection, and environment variable management.",
+    links: [{ label: "code", url: "https://gist.github.com/coolkidaedy/901eae34f0f6f5266c991bbc12d94b54" }],
+  },
+  {
+    id: 10,
+    title: "Gamsa Foods Website",
+    description:
+      "Website for a Korean Oatmeal startup showcasing their products with animations and interactive UI elements.",
+    links: [],
+  },
 ];
 
 export const ProjectsSection = () => {
-    return (
-    <section id="projects" className="py-24 px-4 relative">
-        <div className="container mx-auto max-w-5xl">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-center">
-                Featured <span className="text-primary"> Projects </span>
-            </h2>
-            <p className="text-center text-muted-foreground mb-12 max-w-2xl mx-auto">
-                Here are some of my projects that showcase my skills and experiences.
-            </p>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                {projects.map((project,key) => (
-                    <div key={key} className="group bg-card rounded-lg overflow-hidden shadow-xs card-hover flex flex-col">
-                        <div className="h-48 overflow-hidden">
-                            <img src={project.image} alt={project.title} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
-                        </div>
-                        <div className="p-6 flex flex-col flex-grow">
-                            <div className="flex flex-wrap gap-2 mb-4">
-                                {project.tags.map((tag, index) => (
-                                    <span key={index} className="px-2 py-1 text-xs font-medium border rounded-full bg-secondary text-secondary-foreground">
-                                        {tag}
-                                    </span>
-                                ))}
-                            </div>
-                        
-                            <h3 className="text-xl font-semibold mb-1">{project.title}</h3>
-                            <p className="text-muted-foreground text-sm mb-4 flex-grow">
-                                {project.description}
-                            </p>
-                            
-                            {/* GitHub link stays at bottom */}
-                            <div className="mt-auto">
-                                <a href={project.githubUrl} target="_blank" className="flex items-center gap-2 text-foreground/80 hover:text-primary transition-colors duration-300">
-                                     <Github size={20}/>
-                                     <span className="text-sm">
-                                         {project.id === 3 ? "Research Paper Link" : "GitHub Link"}
-                                     </span>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
+  return (
+    <section
+      id="projects"
+      className="px-5 py-4"
+      style={{ fontFamily: serif, color: "#000", fontSize: "16px", textAlign: "left" }}
+    >
+      <h2 className="font-bold mb-3" style={{ fontSize: "24px" }}>
+        Projects
+      </h2>
+      <ul className="leading-normal" style={{ listStyleType: "disc", paddingLeft: "1.4em" }}>
+        {projects.map((project) => (
+          <li key={project.id} className="mb-2">
+            <strong>{project.title}</strong> - {project.description}
+            {project.links.length > 0 && (
+              <>
+                {" "}
+                (
+                {project.links.map((l, i) => (
+                  <span key={l.label}>
+                    {i > 0 && " · "}
+                    <a href={l.url} target="_blank" rel="noreferrer" style={linkStyle}>
+                      {l.label}
+                    </a>
+                  </span>
                 ))}
-            </div>
-            <div className="text-center mt-12">
-                <a className="cosmic-button w-fit flex items-center mx-auto gap-2" href="https://github.com/coolkidaedy"
-                target="_blank">
-                    Check out my GitHub <ArrowRight size={16} />
-                </a>
-            </div>
-        </div>
+                )
+              </>
+            )}
+          </li>
+        ))}
+      </ul>
     </section>
-    );
+  );
 };

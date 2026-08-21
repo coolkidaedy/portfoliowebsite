@@ -1,0 +1,13 @@
+import { chromium } from 'playwright';
+const browser = await chromium.launch({ headless: true });
+const page = await browser.newPage();
+await page.setViewportSize({ width: 1440, height: 900 });
+await page.goto('http://localhost:5174', { waitUntil: 'networkidle' });
+await page.waitForTimeout(3000);
+const errors = [];
+page.on('console', msg => { if (msg.type() === 'error') errors.push(msg.text()); });
+await page.screenshot({ path: '/tmp/about_section.png', clip: { x: 0, y: 900, width: 1440, height: 900 } });
+await page.screenshot({ path: '/tmp/projects_section.png', clip: { x: 0, y: 1700, width: 1440, height: 900 } });
+await page.screenshot({ path: '/tmp/full_page.png', fullPage: true });
+console.log('errors:', errors);
+await browser.close();
