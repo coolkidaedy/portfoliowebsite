@@ -406,9 +406,12 @@ export const Pictures = () => {
       className="px-5 py-4"
       style={{ fontFamily: serif, color: "#000", fontSize: "16px", textAlign: "left" }}
     >
-      <h2 className="font-bold mb-3" style={{ fontSize: "24px" }}>
+      <h2 className="font-bold mb-1" style={{ fontSize: "24px" }}>
         Pictures
       </h2>
+      <p className="mb-3" style={{ fontSize: "13px", fontStyle: "italic", color: "#555" }}>
+        Click to enlarge.
+      </p>
       <div ref={containerRef} style={{ display: "flex", gap: `${COLUMN_GAP}px` }}>
         {columns.map((column, i) => (
           <div key={i} style={{ flex: 1, minWidth: 0 }}>
