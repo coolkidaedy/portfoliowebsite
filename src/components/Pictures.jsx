@@ -410,7 +410,7 @@ export const Pictures = () => {
         Pictures
       </h2>
       <p className="mb-3" style={{ fontSize: "13px", fontStyle: "italic", color: "#555" }}>
-        Click to enlarge.
+        I am nothing without the people around me. Click to enlarge.
       </p>
       <div ref={containerRef} style={{ display: "flex", gap: `${COLUMN_GAP}px` }}>
         {columns.map((column, i) => (

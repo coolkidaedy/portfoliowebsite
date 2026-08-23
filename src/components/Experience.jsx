@@ -6,7 +6,7 @@ const experiences = [
     role: "Software Engineer Intern",
     org: "Pinterest",
     summary:
-      "Built MCP endpoints, a distributed data-observability framework for Pinterest's A/B testing platform, which handles 10+ TB of data daily.",
+      "Built MCP endpoints and a distributed data-observability framework for Pinterest's A/B testing platform, which handles 10+ TB of data daily.",
   },
   {
     id: "sumly",
@@ -20,7 +20,7 @@ const experiences = [
     role: "Software Engineer Intern",
     org: "Gamsa Foods",
     summary:
-      "Independently built the Korean-oatmeal startup's full website, increasing site traffic by 76%.",
+      "Built the Korean-oatmeal startup's full website, increasing site traffic by 76%.",
   },
   {
     id: "texas-state",
