@@ -10,7 +10,7 @@ const items = [
   { id: "pintern-hangout", text: "Pintern hangout", done: true },
   { id: "visit-palo-alto", text: "Visit Palo Alto", done: false },
   { id: "mission-dolores-park", text: "Mission Dolores Park", done: true },
-  { id: "return-offer", text: "Return offer", done: false },
+  { id: "return-offer", text: "Return offer", done: true },
   { id: "go-out", text: "Go out", done: true },
   { id: "vc-event", text: "VC event", done: true },
   { id: "drinks-mission", text: "Drinks in Mission", done: true },
@@ -67,8 +67,10 @@ export const BucketList = () => {
       style={{ fontFamily: serif, color: "#000", fontSize: "16px", textAlign: "left" }}
     >
       <h2 className="font-bold mb-3" style={{ fontSize: "24px" }}>
-        SF Summer Bucket List
+        NYC Bucket List
       </h2>
+      <details className="mt-6">
+        <summary className="cursor-pointer font-bold mb-3">SF Summer Bucket List — Archived</summary>
       <ul
         className="leading-normal"
         style={{
@@ -101,6 +103,7 @@ export const BucketList = () => {
           </li>
         ))}
       </ul>
+      </details>
     </section>
   );
 };
