@@ -1,14 +1,14 @@
 import { CheckSquare, Square } from "lucide-react";
 
-// Edit this list to manage your SF bucket list.
+// Archived SF bucket list.
 // Add an item: append an object with a new id, your text, and done: false.
 // Mark something finished: change its done from false to true.
-const bucketList = [
+const sfBucketList = [
     { id: 1, text: "Pintern hangout", done: false },
     { id: 2, text: "Visit Palo Alto", done: false },
     { id: 3, text: "Golden Gate Bridge", done: false },
     { id: 4, text: "Mission Dolores Park", done: true },
-    { id: 5, text: "Return offer", done: false },
+    { id: 5, text: "Return offer", done: true },
     { id: 6, text: "Go on a date", done: false },
     { id: 7, text: "Ask for someone's number", done: false },
     { id: 8, text: "Go out", done: false },
@@ -71,38 +71,56 @@ const bucketList = [
     { id: 65, text: "Ocean Beach", done: false },
 ];
 
+// Edit this list to manage your NYC bucket list.
+const nycBucketList = [];
+
+const BucketItems = ({ items }) => (
+    <ul className="space-y-3">
+        {items.map((item) => (
+            <li
+                key={item.id}
+                className="flex items-center gap-3 p-4 gradient-border card-hover text-left"
+            >
+                {item.done ? (
+                    <CheckSquare aria-hidden="true" className="h-5 w-5 text-primary shrink-0" />
+                ) : (
+                    <Square aria-hidden="true" className="h-5 w-5 text-muted-foreground shrink-0" />
+                )}
+                <span className="sr-only">{item.done ? "Completed: " : "To do: "}</span>
+                <span className={item.done ? "line-through text-muted-foreground" : "text-foreground"}>
+                    {item.text}
+                </span>
+            </li>
+        ))}
+    </ul>
+);
+
 export const BucketListSection = () => {
-    const completed = bucketList.filter((item) => item.done).length;
+    const completed = nycBucketList.filter((item) => item.done).length;
+    const sfCompleted = sfBucketList.filter((item) => item.done).length;
 
     return (
         <section id="bucket-list" className="py-24 px-4 relative">
             <div className="container mx-auto max-w-3xl">
                 <h2 className="text-3xl md:text-4xl font-bold mb-4 text-center">
-                    San Francisco <span className="text-primary"> Bucket List</span>
+                    NYC <span className="text-primary"> Bucket List</span>
                 </h2>
                 <p className="text-center text-muted-foreground mb-4 max-w-2xl mx-auto">
-                    A running list of things I want to do around SF
+                    A running list of things I want to do around New York City
                 </p>
                 <p className="text-center text-primary font-medium mb-12">
-                    {completed} / {bucketList.length} completed
+                    {completed} / {nycBucketList.length} completed
                 </p>
-                <ul className="space-y-3">
-                    {bucketList.map((item) => (
-                        <li
-                            key={item.id}
-                            className="flex items-center gap-3 p-4 gradient-border card-hover text-left"
-                        >
-                            {item.done ? (
-                                <CheckSquare className="h-5 w-5 text-primary shrink-0" />
-                            ) : (
-                                <Square className="h-5 w-5 text-muted-foreground shrink-0" />
-                            )}
-                            <span className={item.done ? "line-through text-muted-foreground" : "text-foreground"}>
-                                {item.text}
-                            </span>
-                        </li>
-                    ))}
-                </ul>
+                <BucketItems items={nycBucketList} />
+                <details className="mt-12 border-t border-border pt-6">
+                    <summary className="cursor-pointer text-lg font-semibold rounded focus-visible:outline-2 focus-visible:outline-primary focus-visible:outline-offset-4">
+                        San Francisco Bucket List — Archived
+                    </summary>
+                    <p className="text-muted-foreground mt-4 mb-6">
+                        {sfCompleted} / {sfBucketList.length} completed
+                    </p>
+                    <BucketItems items={sfBucketList} />
+                </details>
             </div>
         </section>
     );
